@@ -3,11 +3,17 @@ package com.infogalaxy.linecomparisonproblem;
 import java.util.Scanner;
 
 public class LineComparison {
-    public static void equals(double length1,double length2){
+    public static void compare(double length1, double length2 ){
         if(length1 == length2){
             System.out.println("Both Lines are Same.");
         }else {
             System.out.println("Lines are Not Same.");
+            //UC-3 Two Length of Line Compare
+            if(length1 > length2){
+                System.out.println("Length of line 1 is Big");
+            }else {
+                System.out.println("Length of line 2 is Big");
+            }
         }
     }
     public static void main(String []args){
@@ -44,7 +50,6 @@ public class LineComparison {
         b2 = sc.nextInt();
         double length2 = Math.sqrt(Math.pow((a1 - a2),2) + Math.pow((b1 - b2),2));
         System.out.println(("Length of Line 2 =" + length2));
-
-        equals(length1, length2);
+        compare(length1, length2);
     }
 }
